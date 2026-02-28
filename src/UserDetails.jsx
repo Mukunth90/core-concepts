@@ -4,9 +4,19 @@ export const UserDetails = ({
   hideofflie,
   isPremium,
   isNewUser,
+  role,
 }) => {
   if (hideofflie && !isOnline) {
     return null;
+  }
+
+  let roleBadge = null;
+  if (role === 'admin') {
+    roleBadge = <span>🔑 Admin</span>;
+  } else if (role === 'moderator') {
+    roleBadge = <span>🛡️ Moderator</span>;
+  } else if (role === 'VIP') {
+    roleBadge = <span>💎 VIP</span>;
   }
 
   return (

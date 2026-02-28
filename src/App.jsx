@@ -9,12 +9,15 @@ import { Product } from './product';
 import { Greeting } from './Greeting';
 import { CardWrapper } from './CardWrapper';
 import { UserDetails } from './UserDetails';
+import { ProductList } from './productList';
 
 import './App.css';
 
 function App() {
   return (
     <div>
+      <ProductList />
+
       <UserDetails
         name="Mukunth"
         isOnline={true}

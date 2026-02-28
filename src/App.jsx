@@ -20,8 +20,9 @@ function App() {
         isOnline={true}
         isPremium={true}
         isNewUser={true}
+        role="admin"
       />
-      <UserDetails name="Sri" isOnline={false} hideOffline={true} />
+      <UserDetails name="Sri" isOnline={true} hideOffline={true} role="VIP" />
 
       <CardWrapper title="User Profile">
         <p>Mukunth</p>

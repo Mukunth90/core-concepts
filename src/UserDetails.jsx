@@ -22,7 +22,10 @@ export const UserDetails = ({
   return (
     <div>
       <h3>
-        {name} {isPremium && <span>⭐</span>} {isNewUser && <span>🎉</span>}
+        {name}
+        {isPremium && <span>⭐</span>}
+        {isNewUser && <span>🎉</span>}
+        {roleBadge}
       </h3>
 
       <span>Status: {isOnline ? '🟢 Online' : '🔴 Offline'}</span>

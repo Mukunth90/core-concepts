@@ -1,5 +1,5 @@
 export const CandidateProfile = () => {
-  const Name = 'Mukunth';
+  const Name = 'Harvey';
   const Role = 'Web Developer';
   const Experience = 14;
   const isAvaiableForHire = true;

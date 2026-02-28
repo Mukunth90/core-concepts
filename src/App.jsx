@@ -10,32 +10,38 @@ import { Greeting } from './Greeting';
 import { CardWrapper } from './CardWrapper';
 import { UserDetails } from './UserDetails';
 import { ProductList } from './productList';
+import { NameList } from './NameList';
+import { TodoList } from './TodoList';
 
 import './App.css';
 
 function App() {
   return (
     <div>
+      <TodoList />
+
+      <NameList />
+
       <ProductList />
 
       <UserDetails
-        name="Mukunth"
+        name="Harvey"
         isOnline={true}
         isPremium={true}
         isNewUser={true}
         role="admin"
       />
-      <UserDetails name="Sri" isOnline={true} hideOffline={true} role="VIP" />
+      <UserDetails name="Donna" isOnline={true} hideOffline={true} role="VIP" />
 
       <CardWrapper title="User Profile">
-        <p>Mukunth</p>
-        <p>mukunthmuralidhar@gmail.com</p>
+        <p>Harvey</p>
+        <p>harvey.specter@gmail.com</p>
         <button>Send Mail</button>
       </CardWrapper>
 
-      <Greeting name="Mukunth" message="You can do it!" />
-      <Greeting name="Sri" />
-      <Greeting message="Acha its your Neru Kutty" />
+      <Greeting name="Harvey" message="You can do it!" />
+      <Greeting name="Donna" />
+      <Greeting message="Ross" />
       <Greeting />
 
       <Product
@@ -44,9 +50,9 @@ function App() {
         inStock={false}
         categories={['Electronics', 'Mobile Phones', 'Trending']}
       />
-      <Welcome name="Mukunth" alias="Ironman" />
-      <Welcome name="Sri" alias="Wonder Women" />
-      <Welcome name="Neru" alias="Captain America" />
+      <Welcome name="Harvey" alias="Ironman" />
+      <Welcome name="Donna" alias="Wonder Women" />
+      <Welcome name="Ross" alias="Captain America" />
 
       <CandidateProfile />
 

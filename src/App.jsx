@@ -13,6 +13,7 @@ import { ProductList } from './productList';
 import { NameList } from './NameList';
 import { TodoList } from './TodoList';
 import { Alert } from './Alert';
+import { NewButton } from './NewButton';
 
 import './App.css';
 
@@ -21,6 +22,8 @@ function App() {
     <div>
       <Alert>Your changes have been saved!</Alert>
       <Alert type="error">There was an error saving your changes!</Alert>
+      <NewButton />
+
       <TodoList />
 
       <NameList />

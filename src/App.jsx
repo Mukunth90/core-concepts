@@ -12,12 +12,15 @@ import { UserDetails } from './UserDetails';
 import { ProductList } from './productList';
 import { NameList } from './NameList';
 import { TodoList } from './TodoList';
+import { Alert } from './Alert';
 
 import './App.css';
 
 function App() {
   return (
     <div>
+      <Alert>Your changes have been saved!</Alert>
+      <Alert type="error">There was an error saving your changes!</Alert>
       <TodoList />
 
       <NameList />

@@ -1,5 +1,5 @@
 import { Welcome } from './welcome';
-import PrimaryCTA from './button';
+import PrimaryCTA from './Button';
 import { Hello, HelloWithoutJSX } from './Hello';
 import { UserProfile } from './UserProfile';
 import { ContactForm } from './ContactForm';
@@ -14,12 +14,16 @@ import { NameList } from './NameList';
 import { TodoList } from './TodoList';
 import { Alert } from './Alert';
 import { NewButton } from './NewButton';
+import { CustomButton } from './CustomButton';
 
 import './App.css';
 
 function App() {
   return (
     <div>
+      <CustomButton text="Ironman" />
+      <CustomButton text="Batman" />
+
       <Alert>Your changes have been saved!</Alert>
       <Alert type="error">There was an error saving your changes!</Alert>
       <NewButton />

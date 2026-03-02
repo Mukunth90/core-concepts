@@ -15,12 +15,19 @@ import { TodoList } from './TodoList';
 import { Alert } from './Alert';
 import { NewButton } from './NewButton';
 import { CustomButton } from './CustomButton';
+import { Contact } from './Contact';
+import { Newsletter } from './NewsLetter';
+import { Menu } from './Menu';
 
 import './App.css';
 
 function App() {
   return (
     <div>
+      <Menu />
+      <Contact />
+      <Newsletter />
+
       <CustomButton text="Ironman" />
       <CustomButton text="Batman" />
 

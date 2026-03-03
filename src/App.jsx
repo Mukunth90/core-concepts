@@ -3,6 +3,7 @@ import { LoginCard } from './LoginCard';
 import { SimpleCounter } from './SimpleCounter';
 import { PrevStateCounter } from './PrevStateCounter';
 import { BatchingCounter } from './BatchingCounter';
+import { UserProfile } from './UserProfile';
 
 import './App.css';
 
@@ -15,7 +16,8 @@ function App() {
       <LoginCard /> */}
       {/* <SimpleCounter /> */}
       {/* <PrevStateCounter /> */}
-      <BatchingCounter />
+      {/* <BatchingCounter /> */}
+      <UserProfile />
     </>
   );
 }

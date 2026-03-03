@@ -4,20 +4,22 @@ import { SimpleCounter } from './SimpleCounter';
 import { PrevStateCounter } from './PrevStateCounter';
 import { BatchingCounter } from './BatchingCounter';
 import { UserProfile } from './UserProfile';
+import { TodoList } from './TodoList';
 
 import './App.css';
 
 function App() {
   return (
     <>
-      <h1>React</h1>
-      {/* <Counter />
+      {/* <h1>React</h1>
       <Counter />
-      <LoginCard /> */}
-      {/* <SimpleCounter /> */}
-      {/* <PrevStateCounter /> */}
-      {/* <BatchingCounter /> */}
-      <UserProfile />
+      <Counter />
+      <LoginCard /> 
+      <SimpleCounter />
+      <PrevStateCounter />
+      <BatchingCounter />
+      <UserProfile /> */}
+      <TodoList />
     </>
   );
 }

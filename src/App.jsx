@@ -5,6 +5,7 @@ import { PrevStateCounter } from './PrevStateCounter';
 import { BatchingCounter } from './BatchingCounter';
 import { UserProfile } from './UserProfile';
 import { TodoList } from './TodoList';
+import { ShoppingCart } from './ShoppingCart';
 
 import './App.css';
 
@@ -18,8 +19,9 @@ function App() {
       <SimpleCounter />
       <PrevStateCounter />
       <BatchingCounter />
-      <UserProfile /> */}
-      <TodoList />
+      <UserProfile /> 
+      <TodoList />*/}
+      <ShoppingCart />
     </>
   );
 }

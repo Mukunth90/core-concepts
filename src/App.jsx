@@ -6,6 +6,7 @@ import { BatchingCounter } from './BatchingCounter';
 import { UserProfile } from './UserProfile';
 import { TodoList } from './TodoList';
 import { ShoppingCart } from './ShoppingCart';
+import { CounterWithReducer } from './CounterWithReducer';
 
 import './App.css';
 
@@ -20,8 +21,9 @@ function App() {
       <PrevStateCounter />
       <BatchingCounter />
       <UserProfile /> 
-      <TodoList />*/}
-      <ShoppingCart />
+      <TodoList />
+      <ShoppingCart />*/}
+      <CounterWithReducer />
     </>
   );
 }

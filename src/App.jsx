@@ -8,6 +8,8 @@ import { TodoList } from './TodoList';
 import { ShoppingCart } from './ShoppingCart';
 import { CounterWithReducer } from './CounterWithReducer';
 import { ShoppingCartWithReducer } from './ShoppingCartWithReducer.jsx';
+import { CounterWithInit } from './CounterWithInit.jsx';
+import { CustomCounter } from './CustomCounter.jsx';
 
 import './App.css';
 
@@ -24,8 +26,10 @@ function App() {
       <UserProfile /> 
       <TodoList />
       <ShoppingCart />
-      <CounterWithReducer />*/}
+      <CounterWithReducer />
       <ShoppingCartWithReducer />
+      <CounterWithInit />*/}
+      <CustomCounter />
     </>
   );
 }

@@ -117,6 +117,76 @@ These examples provide a foundation for understanding how React components are s
 
 ---
 
+### React useReducer() and Lazy Initialization – My Notes
+
+#### Lazy Initialization with useState and useReducer
+
+- Sometimes, calculating the initial state is expensive (e.g., involves heavy computation or data processing).
+- React provides a way to run this expensive computation only once, during the initial render, by passing a function to `useState` or `useReducer`.
+
+**Example with useState:**
+
+```js
+const [state, setState] = useState(() => expensiveComputation());
+```
+
+- Here, `expensiveComputation()` is only called once, on the first render.
+- This is called "lazy initialization".
+- Useful when the initial value is costly to compute.
+
+**Example with useReducer:**
+
+```js
+const [state, dispatch] = useReducer(reducer, initialArg, initFunction);
+```
+
+- The third argument, `initFunction`, is called only once to compute the initial state from `initialArg`.
+- This is also a form of lazy initialization.
+
+#### Summary
+
+- Use lazy initialization when your initial state requires heavy computation.
+- Pass a function to `useState` or use the third argument in `useReducer` to ensure the computation only happens once.
+
+---
+
+### More on useReducer() Lazy Initialization
+
+- The expensive or external work (like reading from localStorage or heavy calculations) is done only once, when the component mounts.
+- React reuses the result of that computation for every subsequent render.
+- The `init` argument (the third argument to `useReducer`) is completely optional. Most of the time, you can just pass a simple value as the second argument.
+- If you do provide an `init` function, React will call it once, passing the second argument to it. Whatever the `init` function returns becomes the actual initial state.
+- The `init` function is ideal for expensive initial computations or for reading from external sources.
+- Example:
+
+```js
+const [state, dispatch] = useReducer(reducer, initialArg, init);
+// React calls: init(initialArg) ONCE, result is used as initial state
+```
+
+---
+
+### How useState() Relates to useReducer()
+
+- `useState` is actually built on top of `useReducer`.
+- You can recreate `useState` using only `useReducer`.
+
+#### useState Recap
+
+- Provides a state value and a setter function.
+- When you call the setter, React updates the state and re-renders the component.
+
+#### How useState is a Specialized useReducer
+
+- `useState` is a specialized version of `useReducer` where:
+  - The reducer always returns the action as the new state.
+  - If the action is a function, it calls it with the current state first (to support functional updates).
+  - The dispatch function is wrapped in a setState function for a simpler API.
+- `useReducer` is the more fundamental hook.
+- `useState` is a convenience built on top of it for the most common use case: replacing state with a new value.
+
+---
+
 ### As I understand:
 
 - useReducer can handle state objects that have several related values, not just a single value.

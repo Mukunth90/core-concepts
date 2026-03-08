@@ -7,6 +7,7 @@ import { UserProfile } from './UserProfile';
 import { TodoList } from './TodoList';
 import { ShoppingCart } from './ShoppingCart';
 import { CounterWithReducer } from './CounterWithReducer';
+import { ShoppingCartWithReducer } from './ShoppingCartWithReducer.jsx';
 
 import './App.css';
 
@@ -22,8 +23,9 @@ function App() {
       <BatchingCounter />
       <UserProfile /> 
       <TodoList />
-      <ShoppingCart />*/}
-      <CounterWithReducer />
+      <ShoppingCart />
+      <CounterWithReducer />*/}
+      <ShoppingCartWithReducer />
     </>
   );
 }
